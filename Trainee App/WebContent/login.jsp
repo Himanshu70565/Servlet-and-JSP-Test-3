@@ -11,7 +11,7 @@
 ${param.message}<br/>
 <form name="loginForm" action="LoginController" method="post" onsubmit="return validateForm()">
 	Enter username : <input type="text" name="username"/><label id="userId"></label><br/>
-	Enter password : <input type="text" name="password"/><label id="userPassword"></label><br/>
+	Enter password : <input type="password" name="password"/><label id="userPassword"></label><br/>
 	<input type="submit" value="Login">
 </form>
 

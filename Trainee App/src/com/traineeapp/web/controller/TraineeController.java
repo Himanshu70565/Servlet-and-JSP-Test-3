@@ -27,9 +27,14 @@ public class TraineeController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Trainee> trainees = traineeService.getAllTrainees();
-		request.setAttribute("trainees", trainees);
-		request.getRequestDispatcher("showAllTrainees.jsp").forward(request, response);
+		String action=request.getParameter("action");
+		if("addTrainee".equals(action)) {
+			request.getRequestDispatcher("addTrainee.jsp").forward(request, response);;
+		}else {
+			List<Trainee> trainees = traineeService.getAllTrainees();
+			request.setAttribute("trainees", trainees);
+			request.getRequestDispatcher("showAllTrainees.jsp").forward(request, response);
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

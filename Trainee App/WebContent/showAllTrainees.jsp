@@ -46,6 +46,6 @@ tr:nth-child(even) {
 		</c:forEach>
 	</tbody>
 </table>
-<a href="addTrainee.jsp">Add new Trainee</a>
+<a href="TraineeController.do?action=addTrainee">Add new Trainee</a>
 </body>
 </html>
